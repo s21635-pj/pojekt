@@ -1,17 +1,18 @@
 package pjwstk;
 
 public class Account {
+   private String pin;
+   private String accountNumber;
    private User owner = new User();
-   private int pin;
    private String login;
    private String password;
-   private int accountNumber;
 
-    public int getAccountNumber() {
+
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -23,11 +24,11 @@ public class Account {
         this.owner = owner;
     }
 
-    public int getPin() {
+    public String getPin() {
         return pin;
     }
 
-    public void setPin(int pin) {
+    public void setPin(String pin) {
         this.pin = pin;
     }
 

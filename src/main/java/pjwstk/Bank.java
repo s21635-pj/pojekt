@@ -6,7 +6,10 @@ public class Bank {
     private int id;
     private ArrayList<Account> accounts = new ArrayList<Account>();
     private String name;
-    private String adres;
+    private String address;
+    public static boolean isBankAccountValid(String accountNumber){
+        return accountNumber.matches("^(\\d{26})");
+    }
 
     public int getId() {
         return id;
@@ -17,6 +20,7 @@ public class Bank {
     }
 
     public ArrayList<Account> getAccounts() {
+        ArrayList<Account> accounts = this.accounts;
         return accounts;
     }
 
@@ -32,11 +36,11 @@ public class Bank {
         this.name = name;
     }
 
-    public String getAdres() {
-        return adres;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdres(String adres) {
-        this.adres = adres;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

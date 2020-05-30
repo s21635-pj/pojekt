@@ -1,18 +1,19 @@
 package pjwstk;
 
 public class User {
-    private String name;
     private int id;
-    private String secondname;
+    private String firstName;
+    private String secondName;
     private int phoneNumber;
     private String email;
 
-    public String getName() {
-        return name;
+
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public int getId() {
@@ -23,12 +24,12 @@ public class User {
         this.id = id;
     }
 
-    public String getSecondname() {
-        return secondname;
+    public String getSecondName() {
+        return secondName;
     }
 
-    public void setSecondname(String secondname) {
-        this.secondname = secondname;
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 
     public int getPhoneNumber() {
