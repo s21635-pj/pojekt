@@ -7,8 +7,23 @@ public class Bank {
     private ArrayList<Account> accounts = new ArrayList<Account>();
     private String name;
     private String address;
+
     public static boolean isBankAccountValid(String accountNumber){
+        if (accountNumber.matches("^(\\d{26})") == true){
+            System.out.println("Zagdza się");
+        }
+        else {
+            System.out.println("Nie zgadza się");
+        }
         return accountNumber.matches("^(\\d{26})");
+
+    }
+
+    public Bank(int id, ArrayList<Account> accounts, String name, String address) {
+        this.id = id;
+        this.accounts = accounts;
+        this.name = name;
+        this.address = address;
     }
 
     public int getId() {

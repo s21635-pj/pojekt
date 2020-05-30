@@ -1,12 +1,22 @@
 package pjwstk;
 
+import java.math.BigDecimal;
+
 public class Account {
    private String pin;
    private String accountNumber;
-   private User owner = new User();
+   private User owner = null;
    private String login;
    private String password;
+   private BigDecimal balance;
 
+    public Account(String pin, String accountNumber, User owner, String login, String password) {
+        this.pin = pin;
+        this.accountNumber = accountNumber;
+        this.owner = owner;
+        this.login = login;
+        this.password = password;
+    }
 
     public String getAccountNumber() {
         return accountNumber;
@@ -14,6 +24,14 @@ public class Account {
 
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public User getOwner() {
